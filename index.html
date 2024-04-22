@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BLADE - Fine Swords and Axes</title>
+<style>
+  body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    font-family: 'Times New Roman', serif;
+  }
+  .container {
+    text-align: center;
+    padding: 20px;
+  }
+  .header {
+    color: gold;
+    font-size: 48px;
+    font-family: 'Papyrus', fantasy; /* This will depend on the actual fonts available */
+  }
+  .description {
+    color: silver;
+    margin: 20px;
+  }
+  .star {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: silver;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">BLADE</div>
+  <p class="description">Discover our premium collection of hand-crafted swords and axes designed for the discerning warrior. Each piece a testament to the art of battle, forged in tradition and styled for the modern combatant.</p>
+</div>
+
+<script>
+  document.onmousemove = function(e) {
+    let star = document.createElement('div');
+    star.className = 'star';
+    document.body.appendChild(star);
+    star.style.left = e.pageX + 'px';
+    star.style.top = e.pageY + 'px';
+    setTimeout(function() {
+      star.remove();
+    }, 500); // Stars disappear after 0.5 seconds
+  };
+</script>
+
+</body>
+</html>
